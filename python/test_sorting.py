@@ -25,6 +25,9 @@ class BubbleSortTestCase(unittest.TestCase):
     def test_sort_alphabetic_list(self):
         self.assertEqual(['A', 'Y', 'a', 'c', 'd', 'd'], self.sorting.bubble_sort(['Y', 'A', 'a', 'd', 'c', 'd']))
 
+    def test_sort_floats(self):
+        self.assertEqual([1E-30, 1E-5, 1, 1, 1, 1.001], self.sorting.bubble_sort([1.00, 1, 1.001, 1.000, 1E-5, 1E-30]))
+
 
 if __name__ == '__main__':
     unittest.main()
